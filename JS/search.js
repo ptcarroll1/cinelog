@@ -15,30 +15,30 @@ searchInput.addEventListener('input', async () => {
     searchResults.innerHTML = '';
     movies.slice(0, 5).forEach(movie => {
       const result = document.createElement('div');
-      result.className = 'search-result';
+      result.className = 'd-flex align-items-start gap-3 py-3 border-bottom border-secondary-subtle';
 
       const img = document.createElement('img');
-      img.className = 'search-result-thumb';
+      img.className = 'search-result-thumb rounded-2 flex-shrink-0';
       img.src = movie.poster ?? placeholderPoster;
       img.alt = movie.title;
 
       const info = document.createElement('div');
       const title = document.createElement('div');
-      title.className = 'search-result-title';
+      title.className = 'fw-semibold mb-1';
       title.textContent = movie.title;
 
       const year = document.createElement('div');
-      year.className = 'search-result-year';
+      year.className = 'small text-secondary mb-2';
       year.textContent = movie.year;
 
       const addToLibrary = document.createElement('a');
       addToLibrary.href = '#';
-      addToLibrary.className = 'search-result-action';
+      addToLibrary.className = 'search-result-action d-block small text-secondary text-decoration-none lh-lg';
       addToLibrary.textContent = '+ Add to Library';
 
       const addToWatchlist = document.createElement('a');
       addToWatchlist.href = '#';
-      addToWatchlist.className = 'search-result-action';
+      addToWatchlist.className = 'search-result-action d-block small text-secondary text-decoration-none lh-lg';
       addToWatchlist.textContent = '+ Add to Watchlist';
 
       info.append(title, year, addToLibrary, addToWatchlist);
