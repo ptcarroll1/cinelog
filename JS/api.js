@@ -1,10 +1,10 @@
-const API_KEY = "27fd29c9194d5b82dc85ffa94e9d5e3d";
-const API_URL = "https://api.themoviedb.org/3";
-const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
+const API_KEY = '27fd29c9194d5b82dc85ffa94e9d5e3d';
+const API_URL = 'https://api.themoviedb.org/3';
+const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 
 
-async function searchMovies(title) {
-  const url = `${API_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(title)}`;
+async function searchMovies(query) {
+  const url = `${API_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}`;
 
   const response = await fetch(url);
   if (!response.ok) {
@@ -12,36 +12,14 @@ async function searchMovies(title) {
   }
 
   const data = await response.json();
-
-
   return data.results.map(movie => ({
     id: movie.id,
     title: movie.title,
-    year: movie.release_date ? movie.release_date.slice(0, 4) : "Unknown",
+    year: movie.release_date ? movie.release_date.slice(0, 4) : 'Unknown',
     poster: movie.poster_path
       ? `${IMAGE_BASE_URL}${movie.poster_path}`
-      : "assets/images/placeholder.png",
+      : 'assets/images/placeholder.png',
     overview: movie.overview
   }));
 }
   
-async function fetchPopularMovies(page = 1) {
-  const url = `${API_URL}/movie/popular?api_key=${API_KEY}&page=${page}`;
-
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
-  }
-
-  const data = await response.json();
-
-  return data.results.map(movie => ({
-    id: movie.id,
-    title: movie.title,
-    year: movie.release_date ? movie.release_date.slice(0, 4) : "Unknown",
-    poster: movie.poster_path
-      ? `${IMAGE_BASE_URL}${movie.poster_path}`
-      : "assets/images/placeholder.png",
-    overview: movie.overview
-  }));
-}
