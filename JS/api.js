@@ -1,6 +1,7 @@
 const API_KEY = '27fd29c9194d5b82dc85ffa94e9d5e3d';
 const API_URL = 'https://api.themoviedb.org/3';
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
+const PLACEHOLDER_IMAGE = '';
 
 
 async function searchMovies(query) {
@@ -15,7 +16,7 @@ async function searchMovies(query) {
   return data.results.map(movie => ({
     id: movie.id,
     title: movie.title,
-    year: movie.release_date ? movie.release_date.slice(0, 4) : 'Unknown',
+    year: movie.release_date ? movie.release_date.slice(0, 4) : 'N/A',
     poster: movie.poster_path
       ? `${IMAGE_BASE_URL}${movie.poster_path}`
       : 'assets/images/placeholder.png',
@@ -25,7 +26,6 @@ async function searchMovies(query) {
   
 async function fetchPopularMovies(page = 1) {
   const url = `${API_URL}/movie/popular?api_key=${API_KEY}&page=${page}`;
-
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
@@ -36,10 +36,10 @@ async function fetchPopularMovies(page = 1) {
   return data.results.map(movie => ({
     id: movie.id,
     title: movie.title,
-    year: movie.release_date ? movie.release_date.slice(0, 4) : "Unknown",
+    year: movie.release_date ? movie.release_date.slice(0, 4) : 'N/A',
     poster: movie.poster_path
       ? `${IMAGE_BASE_URL}${movie.poster_path}`
-      : "assets/images/placeholder.png",
+      : PLACEHOLDER_IMAGE,
     overview: movie.overview
   }));
 }
