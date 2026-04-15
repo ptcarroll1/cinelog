@@ -13,9 +13,7 @@ async function fetchMovieData(title) {
 
   const data = await response.json();
 
-    if (!data.results) {
-        throw new Error("No results found");
-    }
+  
   return data.results.map(movie => ({
     id: movie.id,
     title: movie.title,
