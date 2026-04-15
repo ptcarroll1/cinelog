@@ -23,3 +23,23 @@ async function searchMovies(query) {
   }));
 }
   
+async function fetchPopularMovies(page = 1) {
+  const url = `${API_URL}/movie/popular?api_key=${API_KEY}&page=${page}`;
+
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  const data = await response.json();
+
+  return data.results.map(movie => ({
+    id: movie.id,
+    title: movie.title,
+    year: movie.release_date ? movie.release_date.slice(0, 4) : "Unknown",
+    poster: movie.poster_path
+      ? `${IMAGE_BASE_URL}${movie.poster_path}`
+      : "assets/images/placeholder.png",
+    overview: movie.overview
+  }));
+}
