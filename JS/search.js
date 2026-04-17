@@ -36,10 +36,23 @@ searchInput.addEventListener('input', async () => {
       addToLibrary.className = 'search-result-action d-block small text-secondary text-decoration-none lh-lg';
       addToLibrary.textContent = '+ Add to Library';
 
+      // Add event listener to handle adding movie to library
+      addToLibrary.addEventListener('click', (e) => {
+        e.preventDefault();
+        const added = addMovieToLibrary(movie);
+        addToLibrary.textContent = added ? 'Added to Library' : 'Already in Library';
+        });
       const addToWatchlist = document.createElement('a');
       addToWatchlist.href = '#';
       addToWatchlist.className = 'search-result-action d-block small text-secondary text-decoration-none lh-lg';
       addToWatchlist.textContent = '+ Add to Watchlist';
+
+      // Add event listener to handle adding movie to watchlist
+      addToWatchlist.addEventListener('click', (e) => {
+        e.preventDefault();
+        const added = addMovieToWatchlist(movie);
+        addToWatchlist.textContent = added ? 'Added to Watchlist' : 'Already in Watchlist';
+        });
 
       info.append(title, year, addToLibrary, addToWatchlist);
       result.append(img, info);
