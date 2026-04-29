@@ -10,21 +10,21 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand px-4 py-2 sticky-top">
+  <nav class="navbar navbar-expand px-4 py-2 sticky-top" aria-label="Main navigation">
     <div class="container-fluid justify-content-center gap-4">
-      <a class="nav-link" href="../search/index.html">
-        <i class="bi bi-search"></i>
+      <a class="nav-link" href="search" aria-label="Search">
+        <i class="bi bi-search" aria-hidden="true"></i>
       </a>
-      <a class="nav-link" href="../index.html">Home</a>
-      <a class="nav-link" href="../library/index.html">Library</a>
-      <a class="nav-link" href="../watchlist/index.html">Watchlist</a>
+      <a class="nav-link" href="..">Home</a>
+      <a class="nav-link" href="/library" aria-current="page">Library</a>
+      <a class="nav-link" href="/watchlist">Watchlist</a>
     </div>
   </nav>
 
-<main class="px-5 py-5">
-  <h1 class="mb-4">Library</h1>
-  <div id="libraryResults" class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4"></div>
-</main>
+  <main class="px-3 py-3 px-sm-4 py-sm-4 px-md-5 py-md-5">
+    <h1 class="mb-4">Library</h1>
+    <div id="libraryResults" class="row row-cols-2 row-cols-md-4 row-cols-lg-6 g-4"></div>
+  </main>
 
 <script src="../JS/api.js"></script>
 <script src="../JS/storage.js"></script>

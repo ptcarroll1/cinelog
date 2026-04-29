@@ -21,10 +21,10 @@ function renderMoviePosters(containerName, movies) {
     col.innerHTML = `
     <article class="movie-card position-relative overflow-hidden">
       <img class="w-100" src="${movie.poster}" alt="${movie.title}">
-      <div class="movie-card-overlay position-absolute bottom-0 start-0 end-0">
-        <header class="fs-5 fw-bold mx-3">${movie.title}</header>
+      <footer class="movie-card-overlay position-absolute bottom-0 start-0 end-0">
+        <h3 class="fs-5 fw-bold mx-3">${movie.title}</h3>
         <p class="mx-3">${movie.overview.substring(0, 50)}...</p>
-      </div>
+      </footer>
     </article>`;
 
     container.appendChild(col);

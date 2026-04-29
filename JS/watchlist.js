@@ -18,11 +18,11 @@ function loadWatchlistPage() {
     col.innerHTML = `
       <article class="movie-card position-relative overflow-hidden">
         <img class="w-100" src="${movie.poster}" alt="${movie.title}">
-        <div class="p-2">
+        <footer class="p-2">
           <h2 class="fs-6 fw-bold mb-1">${movie.title}</h2>
           <p class="small text-secondary mb-2">${movie.year}</p>
-          <button class="btn btn-sm btn-outline-light remove-btn">Remove</button>
-        </div>
+          <button class="btn btn-sm btn-outline-light remove-btn" aria-label="Remove ${movie.title} from watchlist">Remove</button>
+        </footer>
       </article>
     `;
 

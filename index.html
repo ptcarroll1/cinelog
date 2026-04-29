@@ -10,26 +10,27 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand px-4 py-2 sticky-top">
+  <nav class="navbar navbar-expand px-4 py-2 sticky-top" aria-label="Main navigation">
     <div class="container-fluid justify-content-center gap-4">
-      <a class="nav-link" href="search">
-        <i class="bi bi-search"></i>
+      <a class="nav-link" href="/search" aria-label="Search">
+        <i class="bi bi-search" aria-hidden="true"></i>
       </a>
-      <a class="nav-link" href="">Home</a>
-      <a class="nav-link" href="library/index.html">Library</a>
-      <a class="nav-link" href="watchlist/index.html">Watchlist</a>
+      <a class="nav-link" aria-current="page">Home</a>
+      <a class="nav-link" href="/library">Library</a>
+      <a class="nav-link" href="/watchlist">Watchlist</a>
     </div>
   </nav>
 
-  <main class="px-5 py-5">
+  <main class="px-3 py-3 px-sm-4 py-sm-4 px-md-5 py-md-5">
+    <h1 class="visually-hidden">CineLog</h1>
 
-    <section class="mb-5">
-      <div class="fs-6 fw-semibold mb-3">Recommended</div>
+    <section class="mb-5" aria-labelledby="recommended-heading">
+      <h2 id="recommended-heading" class="fs-6 fw-semibold mb-3">Recommended</h2>
       <div id="popular" class="row row-cols-3 row-cols-lg-6 g-4"></div>
     </section>
 
-    <section>
-      <div class="fs-6 fw-semibold mb-3">Trending</div>
+    <section aria-labelledby="trending-heading">
+      <h2 id="trending-heading" class="fs-6 fw-semibold mb-3">Trending</h2>
       <div id="trending" class="row row-cols-3 row-cols-lg-6 g-4"></div>
     </section>
 
