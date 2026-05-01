@@ -6,8 +6,21 @@ async function loadHomePageMovies() {
     const trendingMovies = await fetchTrendingMovies();
     renderMoviePosters('#trending', trendingMovies);
   } catch (error) {
-    console.error(error.message);
+    showError('#popular');
+    showError('#trending');
   }
+}
+
+function showError(containerName) {
+  const container = document.querySelector(containerName);
+  if (!container) return;
+  container.innerHTML = `
+    <div class="col-12">
+      <p class="text-danger">
+        <i class="bi bi-exclamation-circle me-2"></i>
+        Failed to load movies. Please try again later.
+      </p>
+    </div>`;
 }
 
 function renderMoviePosters(containerName, movies) {
