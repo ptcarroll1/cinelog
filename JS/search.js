@@ -9,6 +9,8 @@ searchInput.addEventListener('input', async () => {
     searchResults.innerHTML = '';
     return;
   }
+  searchResults.innerHTML = `<div class="text-center py-4"><div class="spinner-border" role="status"></div></div>`;
+
 
   try {
     const movies = await searchTMDB(query);

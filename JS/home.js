@@ -1,4 +1,8 @@
 async function loadHomePageMovies() {
+  const popularContainer = document.querySelector('#popular');
+  const trendingContainer = document.querySelector('#trending');
+  popularContainer.innerHTML = `<div class="col-12 text-center"><div class="spinner-border" role="status"></div></div>`;
+  trendingContainer.innerHTML = `<div class="col-12 text-center"><div class="spinner-border" role="status"></div></div>`;
   try {
     const popularMovies = await fetchPopular();
     renderMoviePosters('#popular', popularMovies);
