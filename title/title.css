@@ -1,0 +1,125 @@
+.hero-backdrop {
+  background-image: none;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+  min-height: 340px;
+}
+.hero-backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(17,17,17,0.3) 0%, rgba(17,17,17,1) 100%);
+}
+.movie-poster {
+  width: 160px;
+}
+@media (min-width: 576px) {
+  .movie-poster { width: 200px; }
+}
+.badge-genre {
+  background-color: #2a2a2a;
+  color: #ccc;
+  border: 1px solid #444;
+}
+.cast-thumb {
+  width: 64px;
+  height: 64px;
+  background-color: #222;
+}
+.cast-item {
+  font-size: 0.78rem;
+  color: #bbb;
+  width: 80px;
+}
+.stat-box {
+  background-color: #1e1e1e;
+  border: 1px solid #2e2e2e;
+  min-width: 90px;
+}
+.stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+}
+.btn-action {
+  background-color: #222;
+  border: 1px solid #444;
+  color: #ddd;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+.btn-action:hover {
+  background-color: #2e2e2e;
+  border-color: #666;
+  color: #fff;
+}
+.btn-action.active {
+  background-color: #333;
+  border-color: #888;
+  color: #fff;
+}
+
+/* Star rating */
+.star-btn {
+  color: #444;
+  cursor: pointer;
+  transition: color 0.1s, transform 0.1s;
+  line-height: 1;
+}
+.star-btn:hover,
+.star-btn.hovered {
+  color: #ffc107;
+  transform: scale(1.15);
+}
+.star-btn.filled {
+  color: #ffc107;
+}
+#ratingLabel {
+  min-height: 1.2em;
+}
+
+/* Right panel */
+.side-panel {
+  background-color: #1e1e1e;
+  border: 1px solid #2e2e2e;
+  padding: 20px;
+}
+
+/* Reviews */
+.review-textarea {
+  background-color: #2a2a2a;
+  border-color: #444;
+  color: #ddd;
+  resize: vertical;
+}
+.review-textarea:focus {
+  background-color: #2a2a2a;
+  border-color: #666;
+  color: #fff;
+  box-shadow: none;
+}
+.review-item {
+  border-top: 1px solid #2a2a2a;
+}
+.review-item:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+.review-delete {
+  color: #555;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.review-delete:hover {
+  color: #e55;
+}
+.review-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (min-width: 992px) {
+  .right-sticky {
+    top: 70px;
+  }
+}

@@ -11,7 +11,7 @@ searchInput.addEventListener('input', async () => {
   }
 
   try {
-    const movies = await searchMovies(query);
+    const movies = await searchTMDB(query);
     searchResults.innerHTML = '';
     movies.slice(0, 5).forEach(movie => {
       const result = document.createElement('article');

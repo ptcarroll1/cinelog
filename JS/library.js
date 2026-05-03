@@ -16,6 +16,7 @@ function loadLibraryPage() {
     col.className = 'col';
 
     col.innerHTML = `
+    <a href="../title/?media_type=${movie.media_type}&id=${movie.id}" class="text-decoration-none text-white">
       <article class="movie-card position-relative overflow-hidden">
         <img class="w-100" src="${movie.poster}" alt="${movie.title}">
         <footer class="p-2">
@@ -24,13 +25,8 @@ function loadLibraryPage() {
           <button class="btn btn-sm btn-outline-light remove-btn" aria-label="Remove ${movie.title} from library">Remove</button>
         </footer>
       </article>
+    </a>
     `;
-
-    const removeBtn = col.querySelector('.remove-btn');
-    removeBtn.addEventListener('click', () => {
-      removeMovieFromLibrary(movie.id);
-      loadLibraryPage(); // refresh UI
-    });
 
     container.appendChild(col);
   });

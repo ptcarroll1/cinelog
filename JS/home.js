@@ -1,9 +1,9 @@
 async function loadHomePageMovies() {
   try {
-    const popularMovies = await fetchPopularMovies();
+    const popularMovies = await fetchPopular();
     renderMoviePosters('#popular', popularMovies);
 
-    const trendingMovies = await fetchTrendingMovies();
+    const trendingMovies = await fetchTrending();
     renderMoviePosters('#trending', trendingMovies);
   } catch (error) {
     showError('#popular');
@@ -24,6 +24,7 @@ function showError(containerName) {
 }
 
 function renderMoviePosters(containerName, movies) {
+  console.log(movies)
   const container = document.querySelector(containerName);
   if (!container) return;
   container.innerHTML = "";
@@ -32,13 +33,15 @@ function renderMoviePosters(containerName, movies) {
     const col = document.createElement('div');
     col.className = 'col';
     col.innerHTML = `
-    <article class="movie-card position-relative overflow-hidden">
-      <img class="w-100" src="${movie.poster}" alt="${movie.title}">
-      <footer class="movie-card-overlay position-absolute bottom-0 start-0 end-0">
-        <h3 class="fs-5 fw-bold mx-3">${movie.title}</h3>
-        <p class="mx-3">${movie.overview.substring(0, 50)}...</p>
-      </footer>
-    </article>`;
+    <a href="title/?media_type=${movie.media_type}&id=${movie.id}" class="text-decoration-none text-white">
+      <article class="movie-card position-relative overflow-hidden">
+        <img class="w-100" src="${movie.poster}" alt="${movie.title}">
+        <footer class="movie-card-overlay position-absolute bottom-0 start-0 end-0">
+          <h3 class="fs-5 fw-bold mx-3">${movie.title}</h3>
+          <p class="mx-3">${movie.overview.substring(0, 50)}...</p>
+        </footer>
+      </article>
+    </a>`;
 
     container.appendChild(col);
   });
