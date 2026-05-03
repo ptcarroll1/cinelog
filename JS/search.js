@@ -1,7 +1,7 @@
 const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
 const placeholderPoster = '';
-
+if (searchInput) {
 searchInput.addEventListener('input', async () => {
   const query = searchInput.value.trim();
 
@@ -63,3 +63,4 @@ searchInput.addEventListener('input', async () => {
     searchResults.innerHTML = '';
   }
 });
+}

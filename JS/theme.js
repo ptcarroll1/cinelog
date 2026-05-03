@@ -7,7 +7,7 @@ function initTheme() {
 function updateIcon(theme) {
     const icon = document.querySelector('#themeToggle i');
     if (!icon) return;
-    icon.className = theme === 'light' ? 'bi bi-sun' : 'bi bi-moon';
+    icon.className = theme === 'dark' ? 'bi bi-sun' : 'bi bi-moon';
 }
 
 document.getElementById('themeToggle').addEventListener('click', () => {

@@ -1,11 +1,11 @@
 body {
-  background-color: #111;
-  color: #fff;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
 }
 
 nav {
-  background-color: #1a1a1a;
-  border-bottom: 1px solid #2a2a2a;
+  background-color: var(--bs-secondary-bg);
+  border-bottom: 1px solid var(--bs-border-color);
 }
 
 .movie-card {
@@ -42,6 +42,12 @@ nav {
   width: 144px;
   height: 216px;
   object-fit: cover;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #111;
+  --bs-secondary-bg: #222;
+  --bs-border-color: #333;
 }
 
 @media (max-width: 575px) {
