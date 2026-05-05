@@ -12,7 +12,7 @@
 
   <nav class="navbar navbar-expand px-4 py-2 sticky-top" aria-label="Main navigation">
     <button id="themeToggle" class="btn btn-sm btn-outline-secondary" aria-label="Toggle theme">
-    <i class="bi bi-sun"></i>
+    <i class="bi bi-sun" aria-hidden="true"></i>
     </button>   
     <div class="container-fluid justify-content-center gap-4">
       <a class="nav-link" href="../search" aria-label="Search" aria-current="page">
@@ -26,10 +26,11 @@
 
   <main class="px-3 py-3 px-sm-4 py-sm-4">
     <form role="search" class="mb-4">
-      <input type="search" class="form-control form-control-lg" placeholder="Search movies..." id="searchInput">
+      <label for="searchInput" class="visually-hidden">Search movies and TV shows</label>
+      <input type="search" class="form-control form-control-lg" placeholder="Search movies..." id="searchInput" aria-label="Search movies and TV shows">
     </form>
 
-    <div id="searchResults"></div>
+    <div id="searchResults" aria-live="polite" aria-label="Search results"></div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,3 +1,35 @@
+#detailsList {
+  max-width: 500px;
+}
+
+.hero-inner {
+  min-height: 340px;
+}
+
+.main-content {
+  margin-top: -80px;
+  position: relative;
+  z-index: 1;
+}
+
+.clear-rating-btn {
+  font-size: 0.75rem;
+  color: #888;
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cast-placeholder-icon {
+  font-size: 1.5rem;
+}
+
+.review-delete-icon {
+  font-size: 0.75rem;
+}
+
 .hero-backdrop {
   background-image: none;
   background-size: cover;
@@ -122,4 +154,76 @@
   .right-sticky {
     top: 70px;
   }
+}
+
+/* Light theme */
+[data-bs-theme="light"] .hero-backdrop::after {
+  background: none;
+}
+
+[data-bs-theme="light"] .badge-genre {
+  background-color: #ebebeb;
+  color: #333;
+  border-color: #ccc;
+}
+
+[data-bs-theme="light"] .cast-thumb {
+  background-color: #ddd;
+}
+
+[data-bs-theme="light"] .cast-item {
+  color: #555;
+}
+
+[data-bs-theme="light"] .stat-box {
+  background-color: #f4f4f4;
+  border-color: #ddd;
+}
+
+[data-bs-theme="light"] .btn-action {
+  background-color: #efefef;
+  border-color: #ccc;
+  color: #333;
+}
+
+[data-bs-theme="light"] .btn-action:hover {
+  background-color: #e2e2e2;
+  border-color: #aaa;
+  color: #111;
+}
+
+[data-bs-theme="light"] .btn-action.active {
+  background-color: #e2e2e2;
+  border-color: #999;
+  color: #111;
+}
+
+[data-bs-theme="light"] .star-btn {
+  color: #ccc;
+}
+
+[data-bs-theme="light"] .side-panel {
+  background-color: #f4f4f4;
+  border-color: #ddd;
+}
+
+[data-bs-theme="light"] .review-textarea {
+  background-color: #fff;
+  border-color: #ccc;
+  color: #333;
+}
+
+[data-bs-theme="light"] .review-textarea:focus {
+  background-color: #fff;
+  border-color: #999;
+  color: #111;
+  box-shadow: none;
+}
+
+[data-bs-theme="light"] .review-item {
+  border-top-color: #e0e0e0;
+}
+
+[data-bs-theme="light"] .review-delete {
+  color: #aaa;
 }

@@ -50,13 +50,6 @@ nav {
   --bs-border-color: #333;
 }
 
-.review-textarea::placeholder {
-  color: white;
-}
-
-.review-text {
-  color: white !important;
-}
 
 @media (max-width: 575px) {
   .search-result-thumb {

@@ -31,10 +31,12 @@ function getWatchlistMovies() {
 }
 
 function addMovieToLibrary(movie) {
+    removeMovieFromStorage('watchlist', movie.id);
     return addMovieToStorage('library', movie);
 }
 
 function addMovieToWatchlist(movie) {
+    removeMovieFromStorage('library', movie.id);
     return addMovieToStorage('watchlist', movie);
 }
 

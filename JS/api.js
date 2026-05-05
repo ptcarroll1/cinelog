@@ -5,7 +5,8 @@ const PLACEHOLDER_IMAGE = '';
 
 async function fetchTMDB(endpoint, params) {
   let url_params = new URLSearchParams(params);
-  const url = `${API_URL}${endpoint}?api_key=${API_KEY}&${url_params.toString()}`;
+  url_params.set('api_key', API_KEY);
+  const url = `${API_URL}${endpoint}?${url_params.toString()}`;
   console.log(url);
   const response = await fetch(url);
   if (!response.ok) {
@@ -26,7 +27,7 @@ async function fetchTMDB(endpoint, params) {
 }
 
 async function searchTMDB(query) {
-  return fetchTMDB('/search/movie', {
+  return fetchTMDB('/search/multi', {
     query: encodeURIComponent(query)
   });
 }
@@ -59,9 +60,10 @@ async function fetchTitle(id, media_type) {
   const rawDate = isTV ? data.first_air_date : data.release_date;
   const year = rawDate ? rawDate.slice(0, 4) : '—';
 
-  const runtimeMins = isTV ? (data.episode_run_time?.[0] ?? null) : (data.runtime ?? null);
-  const runtime = runtimeMins
-    ? (runtimeMins >= 60 ? `${Math.floor(runtimeMins / 60)}h ${runtimeMins % 60}m` : `${runtimeMins}m`)
+  const runtime = isTV && data.number_of_episodes
+    ? `${data.number_of_episodes} episodes`
+    : !isTV && data.runtime
+    ? (data.runtime >= 60 ? `${Math.floor(data.runtime / 60)}h ${data.runtime % 60}m` : `${data.runtime}m`)
     : '—';
 
   let certification = '—';
@@ -100,6 +102,7 @@ async function fetchTitle(id, media_type) {
     voteCount: data.vote_count ?? 0,
     revenue: formatMoney(data.revenue),
     budget: formatMoney(data.budget),
+    tagline: data.tagline ?? '',
     overview: data.overview ?? '',
     director: isTV
       ? (creators.length ? creators.join(', ') : '—')

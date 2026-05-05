@@ -3,7 +3,7 @@ const mediaType = params.get('media_type');
 const contentId = params.get('id');
 const contentKey = `${mediaType}_${contentId}`;
 
-const RATING_LABELS = ['Not rated', 'Poor', 'Fair', 'Good', 'Great', 'Masterpiece'];
+const RATING_LABELS = ['Not rated', 'Horrible', 'Bad', 'Average', 'Great', 'Masterpiece'];
 let currentRating = 0;
 let titleData = null;
 
@@ -35,6 +35,12 @@ function renderContent(c) {
   poster.alt = `${c.title} poster`;
 
   document.getElementById('movieTitle').textContent = c.title;
+
+  const taglineEl = document.getElementById('movieTagline');
+  if (c.tagline) {
+    taglineEl.textContent = `"${c.tagline}"`;
+    taglineEl.classList.remove('d-none');
+  }
 
   document.getElementById('movieMeta').innerHTML = `
     <span>${c.year}</span>
@@ -77,8 +83,8 @@ function renderContent(c) {
     <div class="cast-item d-flex flex-column align-items-center text-center gap-1">
       ${member.photoUrl
         ? `<img src="${member.photoUrl}" alt="${member.name}" class="cast-thumb rounded-circle object-fit-cover">`
-        : `<div class="cast-thumb rounded-circle d-flex align-items-center justify-content-center" style="font-size:1.5rem;">
-             <i class="bi bi-person"></i>
+        : `<div class="cast-thumb rounded-circle d-flex align-items-center justify-content-center" aria-label="${member.name} (no photo available)">
+             <i class="bi bi-person cast-placeholder-icon" aria-hidden="true"></i>
            </div>`}
       <span class="text-body fw-medium">${member.name}</span>
       <span class="text-body-secondary">${member.character}</span>
@@ -132,9 +138,13 @@ function updateButtonStates(titleData) {
 
   btnLibrary.classList.toggle('active', inLibrary);
   btnLibrary.querySelector('i').className = inLibrary ? 'bi bi-collection-fill' : 'bi bi-collection';
+  btnLibrary.setAttribute('aria-label', inLibrary ? 'Remove from Library' : 'Add to Library');
+  btnLibrary.setAttribute('aria-pressed', inLibrary ? 'true' : 'false');
 
   btnWatchlist.classList.toggle('active', inWatchlist);
   btnWatchlist.querySelector('i').className = inWatchlist ? 'bi bi-bookmark-fill' : 'bi bi-bookmark';
+  btnWatchlist.setAttribute('aria-label', inWatchlist ? 'Remove from Watchlist' : 'Add to Watchlist');
+  btnWatchlist.setAttribute('aria-pressed', inWatchlist ? 'true' : 'false');
 }
 
 function setupRatingAndReviews() {
@@ -203,7 +213,7 @@ function renderStars(filled, hovered = 0) {
   } else {
     ratingLabel.textContent = filled > 0 ? `${filled}/5 - ${RATING_LABELS[filled]}` : RATING_LABELS[0];
   }
-  clearRatingWrap.style.display = filled > 0 ? '' : 'none';
+  clearRatingWrap.classList.toggle('d-none', filled <= 0);
 }
 
 function renderReviews() {
@@ -220,7 +230,7 @@ function renderReviews() {
       <div class="d-flex justify-content-between align-items-start gap-2 mb-1">
         <span class="small text-secondary">${r.date}</span>
         <button class="review-delete p-0 lh-1 border-0 bg-transparent" data-id="${r.id}" aria-label="Delete review">
-          <i class="bi bi-x-lg" style="font-size:0.75rem;"></i>
+          <i class="bi bi-x-lg review-delete-icon"></i>
         </button>
       </div>
       <p class="review-text small text-secondary lh-base mb-0">${escapeHtml(r.text)}</p>
