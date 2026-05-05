@@ -27,17 +27,16 @@ function loadLibraryPage() {
   </article>
 </a>
 `;
-
-    container.appendChild(col);
-  });
-  const removeBtn = col.querySelector('.remove-btn');
+const removeBtn = col.querySelector('.remove-btn');
   removeBtn.addEventListener('click', (e) => {
   e.preventDefault();
   e.stopPropagation();
   removeMovieFromLibrary(movie.id);
   loadLibraryPage();
 });
-  
+
+    container.appendChild(col);
+  });
 }
 
 loadLibraryPage();

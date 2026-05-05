@@ -31,7 +31,7 @@ function loadWatchlistPage() {
     removeBtn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      removeMovieFromLibrary(movie.id);
+      removeMovieFromWatchlist(movie.id);
       loadWatchlistPage();
     });
 
