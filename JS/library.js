@@ -16,17 +16,17 @@ function loadLibraryPage() {
     col.className = 'col';
 
     col.innerHTML = `
-    <a href="../title/?media_type=${movie.media_type}&id=${movie.id}" class="text-decoration-none text-white">
-      <article class="movie-card position-relative overflow-hidden">
-        <img class="w-100" src="${movie.poster}" alt="${movie.title}">
-        <footer class="p-2">
-          <h2 class="fs-6 fw-bold mb-1">${movie.title}</h2>
-          <p class="small text-secondary mb-2">${movie.year}</p>
-          <button class="btn btn-sm btn-outline-light remove-btn" aria-label="Remove ${movie.title} from library">${t('library', 'remove')}</button>
-        </footer>
-      </article>
-    </a>
-    `;
+  <a href="../title/?media_type=${movie.media_type}&id=${movie.id}" class="text-decoration-none text-white">
+  <article class="movie-card position-relative overflow-hidden">
+    <img class="w-100" src="${movie.poster}" alt="${movie.title}">
+    <footer class="movie-card-overlay position-absolute bottom-0 start-0 end-0">
+      <h3 class="fs-5 fw-bold mx-3">${movie.title}</h3>
+      <p class="mx-3">${movie.overview ? movie.overview.substring(0, 50) + '...' : ''}</p>
+      <button class="btn btn-sm btn-outline-light remove-btn mx-3 mb-2" aria-label="Remove ${movie.title} from library">Remove</button>
+    </footer>
+  </article>
+</a>
+`;
 
     container.appendChild(col);
   });
