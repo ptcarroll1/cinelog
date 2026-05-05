@@ -30,6 +30,14 @@ function loadLibraryPage() {
 
     container.appendChild(col);
   });
+  const removeBtn = col.querySelector('.remove-btn');
+  removeBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  removeMovieFromLibrary(movie.id);
+  loadLibraryPage();
+});
+  
 }
 
 loadLibraryPage();

@@ -80,8 +80,8 @@ function renderContent(c) {
         : `<div class="cast-thumb rounded-circle d-flex align-items-center justify-content-center" style="font-size:1.5rem;">
              <i class="bi bi-person"></i>
            </div>`}
-      <span class="text-light fw-medium">${member.name}</span>
-      <span>${member.character}</span>
+      <span class="text-body fw-medium">${member.name}</span>
+      <span class="text-body-secondary">${member.character}</span>
     </div>
   `).join('');
 }

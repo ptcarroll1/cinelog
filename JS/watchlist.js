@@ -27,15 +27,17 @@ function loadWatchlistPage() {
       </article>
     </a>
     `;
-
-    const removeBtn = col.querySelector('.remove-btn');
-    removeBtn.addEventListener('click', () => {
-      removeMovieFromWatchlist(movie.id);
+  const removeBtn = col.querySelector('.remove-btn');
+    removeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      removeMovieFromLibrary(movie.id);
       loadWatchlistPage();
     });
 
     container.appendChild(col);
   });
+    
 }
 
 loadWatchlistPage();

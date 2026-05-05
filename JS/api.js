@@ -112,6 +112,7 @@ async function fetchTitle(id, media_type) {
       name: c.name,
       character: c.character,
       photoUrl: c.profile_path ? `https://image.tmdb.org/t/p/w185${c.profile_path}` : ''
+    
     })),
     isTV
   };
