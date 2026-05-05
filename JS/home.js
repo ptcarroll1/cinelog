@@ -22,7 +22,7 @@ function showError(containerName) {
     <div class="col-12">
       <p class="text-danger">
         <i class="bi bi-exclamation-circle me-2"></i>
-        Failed to load movies. Please try again later.
+        ${t('home', 'loadError')}
       </p>
     </div>`;
 }

@@ -7,7 +7,7 @@ function loadWatchlistPage() {
   container.innerHTML = '';
 
   if (movies.length === 0) {
-    container.innerHTML = '<p>No movies in your watchlist yet.</p>';
+    container.innerHTML = `<p>${t('watchlist', 'empty')}</p>`;
     return;
   }
 
@@ -22,7 +22,7 @@ function loadWatchlistPage() {
         <footer class="p-2">
           <h2 class="fs-6 fw-bold mb-1">${movie.title}</h2>
           <p class="small text-secondary mb-2">${movie.year}</p>
-          <button class="btn btn-sm btn-outline-light remove-btn" aria-label="Remove ${movie.title} from watchlist">Remove</button>
+          <button class="btn btn-sm btn-outline-light remove-btn" aria-label="Remove ${movie.title} from watchlist">${t('watchlist', 'remove')}</button>
         </footer>
       </article>
     </a>

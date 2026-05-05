@@ -10,7 +10,7 @@ if (searchInput) {
       searchResults.innerHTML = '';
       return;
     }
-    searchResults.innerHTML = `<div class="text-center py-4"><div class="spinner-border" role="status" aria-label="Searching..."><span class="visually-hidden">Searching...</span></div></div>`;
+    searchResults.innerHTML = `<div class="text-center py-4"><div class="spinner-border" role="status" aria-label="${t('search', 'searching')}"><span class="visually-hidden">${t('search', 'searching')}</span></div></div>`;
 
 
     try {
@@ -84,24 +84,24 @@ if (searchInput) {
 
 function syncButtons(addToLibrary, addToWatchlist, libActive, watchActive) {
   if (libActive) {
-    addToLibrary.textContent = 'Already in Library';
+    addToLibrary.textContent = t('search', 'alreadyInLibrary');
     addToLibrary.removeAttribute('href');
     addToLibrary.className = 'search-result-action d-block small text-secondary text-decoration-none lh-lg';
-    addToWatchlist.textContent = '+ Add to Watchlist';
+    addToWatchlist.textContent = t('search', 'addToWatchlist');
     addToWatchlist.href = '#';
     addToWatchlist.className = 'search-result-action d-block small text-secondary text-decoration-none lh-lg';
   } else if (watchActive) {
-    addToWatchlist.textContent = 'Already in Watchlist';
+    addToWatchlist.textContent = t('search', 'alreadyInWatchlist');
     addToWatchlist.removeAttribute('href');
     addToWatchlist.className = 'search-result-action d-block small text-secondary text-decoration-none lh-lg';
-    addToLibrary.textContent = '+ Add to Library';
+    addToLibrary.textContent = t('search', 'addToLibrary');
     addToLibrary.href = '#';
     addToLibrary.className = 'search-result-action d-block small text-secondary text-decoration-none lh-lg';
   } else {
-    addToLibrary.textContent = '+ Add to Library';
+    addToLibrary.textContent = t('search', 'addToLibrary');
     addToLibrary.href = '#';
     addToLibrary.className = 'search-result-action d-block small text-secondary text-decoration-none lh-lg';
-    addToWatchlist.textContent = '+ Add to Watchlist';
+    addToWatchlist.textContent = t('search', 'addToWatchlist');
     addToWatchlist.href = '#';
     addToWatchlist.className = 'search-result-action d-block small text-secondary text-decoration-none lh-lg';
   }

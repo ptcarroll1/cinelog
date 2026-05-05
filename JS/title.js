@@ -3,13 +3,13 @@ const mediaType = params.get('media_type');
 const contentId = params.get('id');
 const contentKey = `${mediaType}_${contentId}`;
 
-const RATING_LABELS = ['Not rated', 'Horrible', 'Bad', 'Average', 'Great', 'Masterpiece'];
+const RATING_LABELS = t('title', 'ratingLabels');
 let currentRating = 0;
 let titleData = null;
 
 async function loadContent() {
   if (!contentId || !mediaType) {
-    showContentError('No content specified.');
+    showContentError(t('title', 'noContent'));
     return;
   }
 
@@ -19,7 +19,7 @@ async function loadContent() {
     setupButtons(content);
     setupRatingAndReviews();
   } catch (err) {
-    showContentError('Failed to load content. Please try again later.');
+    showContentError(t('title', 'loadError'));
   }
 }
 
@@ -65,18 +65,18 @@ function renderContent(c) {
 
   document.getElementById('movieOverview').textContent = c.overview;
 
-  const directorLabel = c.isTV ? 'Creator' : 'Director';
+  const directorLabel = c.isTV ? t('title', 'creatorLabel') : t('title', 'directorLabel');
   document.getElementById('detailsList').innerHTML = `
     <dt class="col-5 text-secondary fw-normal">${directorLabel}</dt>
     <dd class="col-7">${c.director}</dd>
-    ${!c.isTV ? `<dt class="col-5 text-secondary fw-normal">Writers</dt><dd class="col-7">${c.writers}</dd>` : ''}
-    <dt class="col-5 text-secondary fw-normal">Studio</dt>
+    ${!c.isTV ? `<dt class="col-5 text-secondary fw-normal">${t('title', 'writersLabel')}</dt><dd class="col-7">${c.writers}</dd>` : ''}
+    <dt class="col-5 text-secondary fw-normal">${t('title', 'studioLabel')}</dt>
     <dd class="col-7">${c.studio}</dd>
-    <dt class="col-5 text-secondary fw-normal">Release Date</dt>
+    <dt class="col-5 text-secondary fw-normal">${t('title', 'releaseDateLabel')}</dt>
     <dd class="col-7">${c.releaseDate}</dd>
-    <dt class="col-5 text-secondary fw-normal">Language</dt>
+    <dt class="col-5 text-secondary fw-normal">${t('title', 'languageLabel')}</dt>
     <dd class="col-7">${c.language}</dd>
-    ${!c.isTV ? `<dt class="col-5 text-secondary fw-normal">Budget</dt><dd class="col-7">${c.budget}</dd>` : ''}
+    ${!c.isTV ? `<dt class="col-5 text-secondary fw-normal">${t('title', 'budgetLabel')}</dt><dd class="col-7">${c.budget}</dd>` : ''}
   `;
 
   document.getElementById('castList').innerHTML = c.cast.map(member => `
@@ -138,12 +138,12 @@ function updateButtonStates(titleData) {
 
   btnLibrary.classList.toggle('active', inLibrary);
   btnLibrary.querySelector('i').className = inLibrary ? 'bi bi-collection-fill' : 'bi bi-collection';
-  btnLibrary.setAttribute('aria-label', inLibrary ? 'Remove from Library' : 'Add to Library');
+  btnLibrary.setAttribute('aria-label', inLibrary ? t('title', 'removeFromLibrary') : t('title', 'addToLibrary'));
   btnLibrary.setAttribute('aria-pressed', inLibrary ? 'true' : 'false');
 
   btnWatchlist.classList.toggle('active', inWatchlist);
   btnWatchlist.querySelector('i').className = inWatchlist ? 'bi bi-bookmark-fill' : 'bi bi-bookmark';
-  btnWatchlist.setAttribute('aria-label', inWatchlist ? 'Remove from Watchlist' : 'Add to Watchlist');
+  btnWatchlist.setAttribute('aria-label', inWatchlist ? t('title', 'removeFromWatchlist') : t('title', 'addToWatchlist'));
   btnWatchlist.setAttribute('aria-pressed', inWatchlist ? 'true' : 'false');
 }
 
@@ -221,7 +221,7 @@ function renderReviews() {
   const list = document.getElementById('reviewsList');
 
   if (reviews.length === 0) {
-    list.innerHTML = '<p class="text-secondary small">No reviews yet.</p>';
+    list.innerHTML = `<p class="text-secondary small">${t('title', 'noReviews')}</p>`;
     return;
   }
 

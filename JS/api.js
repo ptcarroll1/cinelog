@@ -6,6 +6,7 @@ const PLACEHOLDER_IMAGE = '';
 async function fetchTMDB(endpoint, params) {
   let url_params = new URLSearchParams(params);
   url_params.set('api_key', API_KEY);
+  url_params.set('language', getLanguage());
   const url = `${API_URL}${endpoint}?${url_params.toString()}`;
   console.log(url);
   const response = await fetch(url);
@@ -48,8 +49,12 @@ function formatMoney(amount) {
 }
 
 async function fetchTitle(id, media_type) {
-  const appendTo = media_type === 'tv' ? 'credits,content_ratings' : 'credits,release_dates';
-  const url = `${API_URL}/${media_type}/${id}?api_key=${API_KEY}&append_to_response=${appendTo}`;
+  let params = new URLSearchParams();
+  params.set('api_key', API_KEY);
+  params.set('language', getLanguage());
+  params.set('append_to_response', media_type === 'tv' ? 'credits,content_ratings' : 'credits,release_dates');
+
+  const url = `${API_URL}/${media_type}/${id}?${params.toString()}`;
   const response = await fetch(url);
   if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 

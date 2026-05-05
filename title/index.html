@@ -15,13 +15,25 @@
     <button id="themeToggle" class="btn btn-sm btn-outline-secondary" aria-label="Toggle theme">
       <i class="bi bi-sun" aria-hidden="true"></i>
     </button>
-    <div class="container-fluid justify-content-center gap-4">
+    <div class="mx-auto d-flex gap-4">
       <a class="nav-link" href="../search" aria-label="Search">
         <i class="bi bi-search" aria-hidden="true"></i>
       </a>
-      <a class="nav-link" href="..">Home</a>
-      <a class="nav-link" href="../library">Library</a>
-      <a class="nav-link" href="../watchlist">Watchlist</a>
+      <a class="nav-link" href=".." data-i18n="nav.home">Home</a>
+      <a class="nav-link" href="../library" data-i18n="nav.library">Library</a>
+      <a class="nav-link" href="../watchlist" data-i18n="nav.watchlist">Watchlist</a>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
+        <i class="bi bi-globe" aria-hidden="true"></i> EN
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item active" href="#" data-lang="en-US">English</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="es-ES">Español</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="fr-FR">Français</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="de-DE">Deutsch</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="ja-JP">日本語</a></li>
+      </ul>
     </div>
   </nav>
 
@@ -46,11 +58,11 @@
             <div class="d-flex gap-2 flex-wrap">
               <button id="btnLibrary" class="btn btn-action btn-sm d-flex align-items-center gap-2" aria-label="Add to Library">
                 <i class="bi bi-collection"></i>
-                <span>Library</span>
+                <span data-i18n="title.libraryBtn">Library</span>
               </button>
               <button id="btnWatchlist" class="btn btn-action btn-sm d-flex align-items-center gap-2" aria-label="Add to Watchlist">
                 <i class="bi bi-bookmark"></i>
-                <span>Watchlist</span>
+                <span data-i18n="title.watchlistBtn">Watchlist</span>
               </button>
             </div>
           </div>
@@ -59,30 +71,30 @@
         <div class="d-flex flex-wrap gap-3 mb-5">
           <div class="stat-box rounded-3 py-2 px-3 text-center">
             <div class="fs-5 fw-semibold" id="statScore">—</div>
-            <div class="stat-label text-uppercase text-secondary">TMDB</div>
+            <div class="stat-label text-uppercase text-secondary" data-i18n="title.tmdbLabel">TMDB</div>
           </div>
           <div class="stat-box rounded-3 py-2 px-3 text-center">
             <div class="fs-5 fw-semibold" id="statVotes">—</div>
-            <div class="stat-label text-uppercase text-secondary">Votes</div>
+            <div class="stat-label text-uppercase text-secondary" data-i18n="title.votesLabel">Votes</div>
           </div>
           <div class="stat-box rounded-3 py-2 px-3 text-center">
             <div class="fs-5 fw-semibold" id="statRevenue">—</div>
-            <div class="stat-label text-uppercase text-secondary">Box Office</div>
+            <div class="stat-label text-uppercase text-secondary" data-i18n="title.boxOfficeLabel">Box Office</div>
           </div>
         </div>
 
         <section class="mb-5" aria-labelledby="overview-heading">
-          <h2 id="overview-heading" class="fs-6 fw-semibold mb-2">Overview</h2>
+          <h2 id="overview-heading" class="fs-6 fw-semibold mb-2" data-i18n="title.overviewHeading">Overview</h2>
           <p class="text-secondary" id="movieOverview"></p>
         </section>
 
         <section class="mb-5" aria-labelledby="details-heading">
-          <h2 id="details-heading" class="fs-6 fw-semibold mb-3">Details</h2>
+          <h2 id="details-heading" class="fs-6 fw-semibold mb-3" data-i18n="title.detailsHeading">Details</h2>
           <dl class="row small" id="detailsList"></dl>
         </section>
 
         <section aria-labelledby="cast-heading">
-          <h2 id="cast-heading" class="fs-6 fw-semibold mb-3">Top Cast</h2>
+          <h2 id="cast-heading" class="fs-6 fw-semibold mb-3" data-i18n="title.castHeading">Top Cast</h2>
           <div class="d-flex flex-wrap gap-4" id="castList"></div>
         </section>
 
@@ -94,7 +106,7 @@
 
           <!-- Star rating -->
           <div class="side-panel rounded-3 mb-3">
-            <h2 class="fs-6 fw-semibold mb-3">Your Rating</h2>
+            <h2 class="fs-6 fw-semibold mb-3" data-i18n="title.yourRating">Your Rating</h2>
             <div class="d-flex gap-2 justify-content-center mb-2" id="starRating" role="group" aria-label="Rate this title">
               <i class="bi bi-star star-btn fs-2" data-star="1" role="button" tabindex="0" aria-label="1 star"></i>
               <i class="bi bi-star star-btn fs-2" data-star="2" role="button" tabindex="0" aria-label="2 stars"></i>
@@ -104,13 +116,13 @@
             </div>
             <div class="text-center small" id="ratingLabel" aria-live="polite" aria-atomic="true">Not rated</div>
             <div class="text-center mt-2 d-none" id="clearRatingWrap">
-              <button id="clearRatingBtn" class="clear-rating-btn" aria-label="Clear your rating">Clear rating</button>
+              <button id="clearRatingBtn" class="clear-rating-btn" aria-label="Clear your rating" data-i18n="title.clearRating">Clear rating</button>
             </div>
           </div>
 
           <!-- Reviews -->
           <div class="side-panel rounded-3">
-            <h2 class="fs-6 fw-semibold mb-3">Reviews</h2>
+            <h2 class="fs-6 fw-semibold mb-3" data-i18n="title.reviewsHeading">Reviews</h2>
             <label for="reviewInput" class="visually-hidden">Write your review</label>
             <textarea
               id="reviewInput"
@@ -118,8 +130,9 @@
               rows="4"
               placeholder="Write your review..."
               aria-label="Write your review"
+              data-i18n-placeholder="title.reviewPlaceholder"
             ></textarea>
-            <button id="submitReview" class="btn btn-action btn-sm w-100 mb-4">Post Review</button>
+            <button id="submitReview" class="btn btn-action btn-sm w-100 mb-4" data-i18n="title.postReview">Post Review</button>
             <div id="reviewsList"></div>
           </div>
 
@@ -130,6 +143,7 @@
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../JS/language.js"></script>
   <script src="../JS/api.js"></script>
   <script src="../JS/storage.js"></script>
   <script src="../JS/title.js"></script>

@@ -14,26 +14,39 @@
     <button id="themeToggle" class="btn btn-sm btn-outline-secondary" aria-label="Toggle theme">
     <i class="bi bi-sun" aria-hidden="true"></i>
     </button>   
-    <div class="container-fluid justify-content-center gap-4">
+    <div class="mx-auto d-flex gap-4">
       <a class="nav-link" href="../search" aria-label="Search" aria-current="page">
         <i class="bi bi-search" aria-hidden="true"></i>
       </a>
-      <a class="nav-link" href="..">Home</a>
-      <a class="nav-link" href="../library">Library</a>
-      <a class="nav-link" href="../watchlist">Watchlist</a>
+      <a class="nav-link" href=".." data-i18n="nav.home">Home</a>
+      <a class="nav-link" href="../library" data-i18n="nav.library">Library</a>
+      <a class="nav-link" href="../watchlist" data-i18n="nav.watchlist">Watchlist</a>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
+        <i class="bi bi-globe" aria-hidden="true"></i> EN
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item active" href="#" data-lang="en-US">English</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="es-ES">Español</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="fr-FR">Français</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="de-DE">Deutsch</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="ja-JP">日本語</a></li>
+      </ul>
     </div>
   </nav>
 
   <main class="px-3 py-3 px-sm-4 py-sm-4">
     <form role="search" class="mb-4">
-      <label for="searchInput" class="visually-hidden">Search movies and TV shows</label>
-      <input type="search" class="form-control form-control-lg" placeholder="Search movies..." id="searchInput" aria-label="Search movies and TV shows">
+      <label for="searchInput" class="visually-hidden" data-i18n="search.label">Search movies and TV shows</label>
+      <input type="search" class="form-control form-control-lg" placeholder="Search movies..." id="searchInput" aria-label="Search movies and TV shows" data-i18n-placeholder="search.placeholder">
     </form>
 
     <div id="searchResults" aria-live="polite" aria-label="Search results"></div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../JS/language.js"></script>
   <script src="../JS/api.js"></script>
   <script src="../JS/search.js"></script>
   <script src="../JS/storage.js"></script>

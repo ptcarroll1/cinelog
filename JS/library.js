@@ -7,7 +7,7 @@ function loadLibraryPage() {
   container.innerHTML = '';
 
   if (movies.length === 0) {
-    container.innerHTML = '<p>No movies in your library yet.</p>';
+    container.innerHTML = `<p>${t('library', 'empty')}</p>`;
     return;
   }
 
@@ -22,7 +22,7 @@ function loadLibraryPage() {
         <footer class="p-2">
           <h2 class="fs-6 fw-bold mb-1">${movie.title}</h2>
           <p class="small text-secondary mb-2">${movie.year}</p>
-          <button class="btn btn-sm btn-outline-light remove-btn" aria-label="Remove ${movie.title} from library">Remove</button>
+          <button class="btn btn-sm btn-outline-light remove-btn" aria-label="Remove ${movie.title} from library">${t('library', 'remove')}</button>
         </footer>
       </article>
     </a>

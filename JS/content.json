@@ -1,0 +1,312 @@
+{
+  "en-US": {
+    "nav": {
+      "home": "Home",
+      "library": "Library",
+      "watchlist": "Watchlist"
+    },
+    "home": {
+      "trending": "Trending",
+      "popular": "Popular",
+      "loadError": "Failed to load movies. Please try again later."
+    },
+    "search": {
+      "placeholder": "Search movies...",
+      "label": "Search movies and TV shows",
+      "searching": "Searching...",
+      "addToLibrary": "+ Add to Library",
+      "alreadyInLibrary": "Already in Library",
+      "addToWatchlist": "+ Add to Watchlist",
+      "alreadyInWatchlist": "Already in Watchlist"
+    },
+    "library": {
+      "heading": "Library",
+      "empty": "No movies in your library yet.",
+      "remove": "Remove"
+    },
+    "watchlist": {
+      "heading": "Watchlist",
+      "empty": "No movies in your watchlist yet.",
+      "remove": "Remove"
+    },
+    "title": {
+      "loading": "Loading...",
+      "libraryBtn": "Library",
+      "watchlistBtn": "Watchlist",
+      "addToLibrary": "Add to Library",
+      "removeFromLibrary": "Remove from Library",
+      "addToWatchlist": "Add to Watchlist",
+      "removeFromWatchlist": "Remove from Watchlist",
+      "tmdbLabel": "TMDB",
+      "votesLabel": "Votes",
+      "boxOfficeLabel": "Box Office",
+      "overviewHeading": "Overview",
+      "detailsHeading": "Details",
+      "castHeading": "Top Cast",
+      "directorLabel": "Director",
+      "creatorLabel": "Creator",
+      "writersLabel": "Writers",
+      "studioLabel": "Studio",
+      "releaseDateLabel": "Release Date",
+      "languageLabel": "Language",
+      "budgetLabel": "Budget",
+      "yourRating": "Your Rating",
+      "ratingLabels": ["Not rated", "Horrible", "Bad", "Average", "Great", "Masterpiece"],
+      "clearRating": "Clear rating",
+      "reviewsHeading": "Reviews",
+      "reviewPlaceholder": "Write your review...",
+      "postReview": "Post Review",
+      "noReviews": "No reviews yet.",
+      "noContent": "No content specified.",
+      "loadError": "Failed to load content. Please try again later."
+    }
+  },
+  "es-ES": {
+    "nav": {
+      "home": "Inicio",
+      "library": "Biblioteca",
+      "watchlist": "Lista de pendientes"
+    },
+    "home": {
+      "trending": "Tendencias",
+      "popular": "Popular",
+      "loadError": "Error al cargar películas. Inténtalo de nuevo más tarde."
+    },
+    "search": {
+      "placeholder": "Buscar películas...",
+      "label": "Buscar películas y series",
+      "searching": "Buscando...",
+      "addToLibrary": "+ Agregar a Biblioteca",
+      "alreadyInLibrary": "Ya en Biblioteca",
+      "addToWatchlist": "+ Agregar a Lista",
+      "alreadyInWatchlist": "Ya en Lista"
+    },
+    "library": {
+      "heading": "Biblioteca",
+      "empty": "Aún no hay películas en tu biblioteca.",
+      "remove": "Eliminar"
+    },
+    "watchlist": {
+      "heading": "Lista de pendientes",
+      "empty": "Aún no hay películas en tu lista.",
+      "remove": "Eliminar"
+    },
+    "title": {
+      "loading": "Cargando...",
+      "libraryBtn": "Biblioteca",
+      "watchlistBtn": "Lista",
+      "addToLibrary": "Agregar a Biblioteca",
+      "removeFromLibrary": "Eliminar de Biblioteca",
+      "addToWatchlist": "Agregar a Lista",
+      "removeFromWatchlist": "Eliminar de Lista",
+      "tmdbLabel": "TMDB",
+      "votesLabel": "Votos",
+      "boxOfficeLabel": "Taquilla",
+      "overviewHeading": "Sinopsis",
+      "detailsHeading": "Detalles",
+      "castHeading": "Reparto Principal",
+      "directorLabel": "Director",
+      "creatorLabel": "Creador",
+      "writersLabel": "Guionistas",
+      "studioLabel": "Estudio",
+      "releaseDateLabel": "Fecha de estreno",
+      "languageLabel": "Idioma",
+      "budgetLabel": "Presupuesto",
+      "yourRating": "Tu Valoración",
+      "ratingLabels": ["Sin valorar", "Horrible", "Malo", "Regular", "Genial", "Obra maestra"],
+      "clearRating": "Borrar valoración",
+      "reviewsHeading": "Reseñas",
+      "reviewPlaceholder": "Escribe tu reseña...",
+      "postReview": "Publicar reseña",
+      "noReviews": "Aún no hay reseñas.",
+      "noContent": "No se especificó contenido.",
+      "loadError": "Error al cargar el contenido. Inténtalo de nuevo más tarde."
+    }
+  },
+  "fr-FR": {
+    "nav": {
+      "home": "Accueil",
+      "library": "Bibliothèque",
+      "watchlist": "À regarder"
+    },
+    "home": {
+      "trending": "Tendances",
+      "popular": "Populaires",
+      "loadError": "Échec du chargement des films. Veuillez réessayer plus tard."
+    },
+    "search": {
+      "placeholder": "Rechercher des films...",
+      "label": "Rechercher des films et séries",
+      "searching": "Recherche en cours...",
+      "addToLibrary": "+ Ajouter à la bibliothèque",
+      "alreadyInLibrary": "Déjà dans la bibliothèque",
+      "addToWatchlist": "+ Ajouter à la liste",
+      "alreadyInWatchlist": "Déjà dans la liste"
+    },
+    "library": {
+      "heading": "Bibliothèque",
+      "empty": "Aucun film dans votre bibliothèque pour l'instant.",
+      "remove": "Supprimer"
+    },
+    "watchlist": {
+      "heading": "À regarder",
+      "empty": "Aucun film dans votre liste pour l'instant.",
+      "remove": "Supprimer"
+    },
+    "title": {
+      "loading": "Chargement...",
+      "libraryBtn": "Bibliothèque",
+      "watchlistBtn": "À regarder",
+      "addToLibrary": "Ajouter à la bibliothèque",
+      "removeFromLibrary": "Retirer de la bibliothèque",
+      "addToWatchlist": "Ajouter à la liste",
+      "removeFromWatchlist": "Retirer de la liste",
+      "tmdbLabel": "TMDB",
+      "votesLabel": "Votes",
+      "boxOfficeLabel": "Box-office",
+      "overviewHeading": "Synopsis",
+      "detailsHeading": "Détails",
+      "castHeading": "Distribution principale",
+      "directorLabel": "Réalisateur",
+      "creatorLabel": "Créateur",
+      "writersLabel": "Scénaristes",
+      "studioLabel": "Studio",
+      "releaseDateLabel": "Date de sortie",
+      "languageLabel": "Langue",
+      "budgetLabel": "Budget",
+      "yourRating": "Votre note",
+      "ratingLabels": ["Non noté", "Horrible", "Mauvais", "Moyen", "Bien", "Chef-d'œuvre"],
+      "clearRating": "Effacer la note",
+      "reviewsHeading": "Critiques",
+      "reviewPlaceholder": "Écrivez votre critique...",
+      "postReview": "Publier la critique",
+      "noReviews": "Aucune critique pour l'instant.",
+      "noContent": "Aucun contenu spécifié.",
+      "loadError": "Échec du chargement du contenu. Veuillez réessayer plus tard."
+    }
+  },
+  "de-DE": {
+    "nav": {
+      "home": "Startseite",
+      "library": "Bibliothek",
+      "watchlist": "Merkliste"
+    },
+    "home": {
+      "trending": "Im Trend",
+      "popular": "Beliebt",
+      "loadError": "Filme konnten nicht geladen werden. Bitte versuche es später erneut."
+    },
+    "search": {
+      "placeholder": "Filme suchen...",
+      "label": "Filme und Serien suchen",
+      "searching": "Suche läuft...",
+      "addToLibrary": "+ Zur Bibliothek hinzufügen",
+      "alreadyInLibrary": "Bereits in der Bibliothek",
+      "addToWatchlist": "+ Zur Merkliste hinzufügen",
+      "alreadyInWatchlist": "Bereits auf der Merkliste"
+    },
+    "library": {
+      "heading": "Bibliothek",
+      "empty": "Noch keine Filme in deiner Bibliothek.",
+      "remove": "Entfernen"
+    },
+    "watchlist": {
+      "heading": "Merkliste",
+      "empty": "Noch keine Filme auf deiner Merkliste.",
+      "remove": "Entfernen"
+    },
+    "title": {
+      "loading": "Laden...",
+      "libraryBtn": "Bibliothek",
+      "watchlistBtn": "Merkliste",
+      "addToLibrary": "Zur Bibliothek hinzufügen",
+      "removeFromLibrary": "Aus der Bibliothek entfernen",
+      "addToWatchlist": "Zur Merkliste hinzufügen",
+      "removeFromWatchlist": "Von der Merkliste entfernen",
+      "tmdbLabel": "TMDB",
+      "votesLabel": "Stimmen",
+      "boxOfficeLabel": "Einspielergebnis",
+      "overviewHeading": "Übersicht",
+      "detailsHeading": "Details",
+      "castHeading": "Hauptbesetzung",
+      "directorLabel": "Regisseur",
+      "creatorLabel": "Schöpfer",
+      "writersLabel": "Drehbuchautoren",
+      "studioLabel": "Studio",
+      "releaseDateLabel": "Erscheinungsdatum",
+      "languageLabel": "Sprache",
+      "budgetLabel": "Budget",
+      "yourRating": "Deine Bewertung",
+      "ratingLabels": ["Nicht bewertet", "Schrecklich", "Schlecht", "Durchschnittlich", "Toll", "Meisterwerk"],
+      "clearRating": "Bewertung löschen",
+      "reviewsHeading": "Rezensionen",
+      "reviewPlaceholder": "Schreibe deine Rezension...",
+      "postReview": "Rezension veröffentlichen",
+      "noReviews": "Noch keine Rezensionen.",
+      "noContent": "Kein Inhalt angegeben.",
+      "loadError": "Inhalt konnte nicht geladen werden. Bitte versuche es später erneut."
+    }
+  },
+  "ja-JP": {
+    "nav": {
+      "home": "ホーム",
+      "library": "ライブラリ",
+      "watchlist": "ウォッチリスト"
+    },
+    "home": {
+      "trending": "トレンド",
+      "popular": "人気",
+      "loadError": "映画を読み込めませんでした。後でもう一度お試しください。"
+    },
+    "search": {
+      "placeholder": "映画を検索...",
+      "label": "映画やTV番組を検索",
+      "searching": "検索中...",
+      "addToLibrary": "+ ライブラリに追加",
+      "alreadyInLibrary": "ライブラリ登録済み",
+      "addToWatchlist": "+ ウォッチリストに追加",
+      "alreadyInWatchlist": "ウォッチリスト登録済み"
+    },
+    "library": {
+      "heading": "ライブラリ",
+      "empty": "ライブラリにはまだ映画がありません。",
+      "remove": "削除"
+    },
+    "watchlist": {
+      "heading": "ウォッチリスト",
+      "empty": "ウォッチリストにはまだ映画がありません。",
+      "remove": "削除"
+    },
+    "title": {
+      "loading": "読み込み中...",
+      "libraryBtn": "ライブラリ",
+      "watchlistBtn": "ウォッチリスト",
+      "addToLibrary": "ライブラリに追加",
+      "removeFromLibrary": "ライブラリから削除",
+      "addToWatchlist": "ウォッチリストに追加",
+      "removeFromWatchlist": "ウォッチリストから削除",
+      "tmdbLabel": "TMDB",
+      "votesLabel": "投票数",
+      "boxOfficeLabel": "興行収入",
+      "overviewHeading": "あらすじ",
+      "detailsHeading": "詳細",
+      "castHeading": "主要キャスト",
+      "directorLabel": "監督",
+      "creatorLabel": "制作者",
+      "writersLabel": "脚本家",
+      "studioLabel": "スタジオ",
+      "releaseDateLabel": "公開日",
+      "languageLabel": "言語",
+      "budgetLabel": "制作費",
+      "yourRating": "あなたの評価",
+      "ratingLabels": ["未評価", "ひどい", "悪い", "普通", "良い", "傑作"],
+      "clearRating": "評価をリセット",
+      "reviewsHeading": "レビュー",
+      "reviewPlaceholder": "レビューを書く...",
+      "postReview": "レビューを投稿",
+      "noReviews": "まだレビューがありません。",
+      "noContent": "コンテンツが指定されていません。",
+      "loadError": "コンテンツを読み込めませんでした。後でもう一度お試しください。"
+    }
+  }
+}

@@ -14,21 +14,34 @@
     <button id="themeToggle" class="btn btn-sm btn-outline-secondary" aria-label="Toggle theme">
     <i class="bi bi-sun" aria-hidden="true"></i>
     </button>
-    <div class="container-fluid justify-content-center gap-4">
+    <div class="mx-auto d-flex gap-4">
       <a class="nav-link" href="../search" aria-label="Search">
         <i class="bi bi-search" aria-hidden="true"></i>
       </a>
-      <a class="nav-link" href="..">Home</a>
-      <a class="nav-link" href="../library" aria-current="page">Library</a>
-      <a class="nav-link" href="../watchlist">Watchlist</a>
+      <a class="nav-link" href=".." data-i18n="nav.home">Home</a>
+      <a class="nav-link" href="../library" aria-current="page" data-i18n="nav.library">Library</a>
+      <a class="nav-link" href="../watchlist" data-i18n="nav.watchlist">Watchlist</a>
+    </div>
+    <div class="dropdown">
+      <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Select language">
+        <i class="bi bi-globe" aria-hidden="true"></i> EN
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li><a class="dropdown-item active" href="#" data-lang="en-US">English</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="es-ES">Español</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="fr-FR">Français</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="de-DE">Deutsch</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="ja-JP">日本語</a></li>
+      </ul>
     </div>
   </nav>
 
   <main class="px-3 py-3 px-sm-4 py-sm-4 px-md-5 py-md-5">
-    <h1 class="mb-4">Library</h1>
+    <h1 class="mb-4" data-i18n="library.heading">Library</h1>
     <div id="libraryResults" class="row row-cols-3 row-cols-md-4 row-cols-lg-6 g-4"></div>
   </main>
 
+<script src="../JS/language.js"></script>
 <script src="../JS/api.js"></script>
 <script src="../JS/storage.js"></script>
 <script src="../JS/library.js"></script>
