@@ -2,10 +2,7 @@
 
 A [progressive web app](https://w3stu.cs.jmu.edu/eyasumm/cinelog) for discovering, tracking, and reviewing movies and TV shows. Browse trending titles, search the full IMDB catalog, keep a personal library of what you've watched, and build a watchlist for what's next.
 
-<img src="https://i.ibb.co/zWMm41Pb/91de6074-5700-45a9-bf3a-5da08d4dc8a4.png" width="48%" />
-<img src="https://i.ibb.co/MDw5GXtC/114a378c-896d-4b3a-b1ba-346262e05f4e.png" width="48%" />
-<img src="https://i.ibb.co/NdVWNqRm/75b65453-06ab-428f-a70b-6e883d3c9a78.png" width="48%" />
-<img src="https://i.ibb.co/zWz90vPv/7dfcada4-6fed-4940-8409-1dc190a9bd07.png" width="48%" />
+![Preview of app](https://i.ibb.co/vCjr55SM/preview.png)
 
 
 ## Features
