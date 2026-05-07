@@ -29,9 +29,7 @@ async function fetchTMDB(endpoint, params) {
 }
 
 async function searchTMDB(query) {
-  return fetchTMDB('/search/multi', {
-    query: encodeURIComponent(query)
-  });
+  return fetchTMDB('/search/multi', { query });
 }
 
 async function fetchPopular() {
