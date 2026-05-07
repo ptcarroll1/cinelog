@@ -7,6 +7,7 @@ async function fetchTMDB(endpoint, params) {
   let url_params = new URLSearchParams(params);
   url_params.set('api_key', API_KEY);
   url_params.set('language', getLanguage());
+  url_params.set('include_adult', 'false');
   const url = `${API_URL}${endpoint}?${url_params.toString()}`;
   console.log(url);
   const response = await fetch(url);
