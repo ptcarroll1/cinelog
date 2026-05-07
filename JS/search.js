@@ -27,12 +27,12 @@ if (searchInput) {
 
         img.style.cursor = 'pointer';
         img.addEventListener('click', () => {
-        window.location.href = `../title/?id=${movie.id}&media_type=${movie.media_type}`;
+        window.location.href = `../title/?media_type=${movie.media_type}&id=${movie.id}`;
         });
 
         const info = document.createElement('div');
         const titleLink = document.createElement('a');
-        titleLink.href = `../title/?id=${movie.id}&media_type=${movie.media_type}`;
+        titleLink.href = `../title/?media_type=${movie.media_type}&id=${movie.id}`;
         titleLink.className = 'text-decoration-none text-body';
 
         const title = document.createElement('h2');
