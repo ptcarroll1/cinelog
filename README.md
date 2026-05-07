@@ -2,21 +2,19 @@
 
 A [progressive web app](https://w3stu.cs.jmu.edu/eyasumm/cinelog) for discovering, tracking, and reviewing movies and TV shows. Browse trending titles, search the full IMDB catalog, keep a personal library of what you've watched, and build a watchlist for what's next.
 
-![Preview of app](https://i.ibb.co/4Z1CSpVj/preview.png)
+![Preview of web app](https://i.ibb.co/4Z1CSpVj/preview.png)
 
 
 ## Features
 
-- **Browse** trending and popular movies and TV shows on the home page
-- **Search** the full IMDB catalog in real time
 - **5-star rating system**
-- **Reviews** with timestamps and per-review delete
-- **Library** — Save titles you've seen, with ratings and reviews
-- **Watchlist** — Queue up titles to watch later
-- **Responsive design** - Compatibility with both desktop and mobile devices
 - **Dark / light theme** - Toggle with persistence
 - **Multiple-language support** - English, Spanish, French, German, Japanese
-- **Installable PWA** — Add to home screen on mobile or desktop
+- **Reviews** with timestamps and per-review delete
+- **Library** - Save titles you've seen, with ratings and reviews
+- **Watchlist** - Queue up titles to watch later
+- **Responsive design** - Compatibility with both desktop and mobile devices
+- **Installable PWA** - Add to home screen on mobile or desktop
 
 ## Tech Stack
 
@@ -35,44 +33,44 @@ cinelog/
 ├── library/index.html    # Library page
 ├── watchlist/index.html  # Watchlist page
 ├── title/
-│   ├── index.html        # Title detail page
-│   └── title.css         # Detail page styles
-├── JS/
-│   ├── api.js            # TMDB API calls
-│   ├── home.js           # Home page logic
-│   ├── search.js         # Search page logic
-│   ├── title.js          # Title page logic
-│   ├── library.js        # Library page logic
-│   ├── watchlist.js      # Watchlist page logic
-│   ├── storage.js        # Persistence helpers
-│   ├── language.js       # Multiple language support
-│   ├── theme.js          # Dark/light theme toggle
-│   └── content.json      # Content in different translations
-└── public/
-    ├── styles.css         # Global styles
-    ├── manifest.json      # PWA manifest
-    ├── service-worker.js  # Service worker
-    ├── icon-192.png       # App icon
-    └── icon-512.png       # App icon (large)
+│   ├── index.html        # Title page
+│   └── title.css         # Title page styles
+├── public/
+│   ├── styles.css        # Global styles
+│   ├── manifest.json     # PWA manifest
+│   ├── service-worker.js # Service worker
+│   ├── icon-192.png      # App icon
+│   └── icon-512.png      # App icon (large)
+└── JS/
+    ├── api.js            # TMDB API calls
+    ├── home.js           # Home page logic
+    ├── search.js         # Search page logic
+    ├── title.js          # Title page logic
+    ├── library.js        # Library page logic
+    ├── watchlist.js      # Watchlist page logic
+    ├── storage.js        # Persistence helpers
+    ├── language.js       # Multiple language support
+    ├── theme.js          # Dark/light theme toggle
+    └── content.json      # Content in different translations
 ```
 
 ## Claims
 
 ### Basic (B1–B12)
 
-- [x] Created/updated README.md that briefly describes the project
-- [x] Landing/home page
-- [x] Navigation menu that links to all major sections
-- [x] At least 3 distinct pages/views
-- [x] Consistent page layout structure across the application
-- [x] Integrated with a chosen third-party API (TMDB) and successfully retrieved data
-- [x] Implemented localStorage or OPFS to save and retrieve user data
-- [x] At least one form of user interaction (button clicks, form input, etc.)
-- [x] Dynamic content that changes based on API data or user input
-- [x] Proper semantic HTML5 elements throughout
-- [x] Custom CSS styling beyond browser defaults
-- [x] Responsive design that works on mobile devices
-- [x] Basic accessibility features (alt text, proper headings, sufficient color contrast)
+- [x] B0: README.md that briefly describes the project
+- [x] B1: Landing/home page
+- [x] B2: Navigation menu that links to all major sections
+- [x] B3: At least 3 distinct pages/views
+- [x] B4: Consistent page layout structure across the application
+- [x] B5: Integrated with a chosen third-party API (TMDB) and successfully retrieved data
+- [x] B6: Implemented localStorage or OPFS to save and retrieve user data
+- [x] B7: At least one form of user interaction (button clicks, form input, etc.)
+- [x] B8: Dynamic content that changes based on API data or user input
+- [x] B9: Proper semantic HTML5 elements throughout
+- [x] B10: Custom CSS styling beyond browser defaults
+- [x] B11: Responsive design that works on mobile devices
+- [x] B12: Basic accessibility features (alt text, proper headings, sufficient color contrast)
 
 ### Intermediate (I13–I29)
 
