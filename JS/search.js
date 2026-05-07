@@ -25,9 +25,14 @@ if (searchInput) {
         img.src = movie.poster ?? placeholderPoster;
         img.alt = movie.title;
 
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', () => {
+        window.location.href = `../title/?id=${movie.id}&media_type=${movie.media_type}`;
+        });
+
         const info = document.createElement('div');
         const titleLink = document.createElement('a');
-        titleLink.href = `/title/?id=${movie.id}&media_type=${movie.media_type}`;
+        titleLink.href = `../title/?id=${movie.id}&media_type=${movie.media_type}`;
         titleLink.className = 'text-decoration-none text-body';
 
         const title = document.createElement('h2');
